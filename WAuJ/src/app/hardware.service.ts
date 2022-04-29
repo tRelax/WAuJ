@@ -36,10 +36,10 @@ export class HardwareService {
   }
 
   updateHardware(hardware: Hardware): Observable<any> {
-    const url = `${this.hardwareUrl}/${hardware.code}`;
+    const url = `${this.hardwareUrl}/${hardware.id}`;
     return this.http.put(url, hardware)
     .pipe(
-      tap(_ => console.log(`updated hardware with code=${hardware.code}`)),
+      tap(_ => console.log(`updated hardware with id=${hardware.id}`)),
       catchError(this.handleError<any>('updateHardware'))
     )
   }
@@ -60,24 +60,6 @@ export class HardwareService {
     .pipe(
       tap(_ => console.log(`deleted hardware w/ code=${code}`)),
       catchError(this.handleError<Hardware>('deleteHardware'))
-    );
-  }
-
-  getHardwaresBetweenPrices(min: number, max: number): Observable<Hardware[]>{
-    const url = `${this.hardwareUrl}` + `?min=${min}&max=${max}`;
-    return this.http.get<Hardware[]>(url)
-    .pipe(
-      tap(_ => console.log(`fetched hardware between prices ${min} and ${max}`)),
-      catchError(this.handleError<Hardware[]>(`getHardwaresBetweenPrices`))
-    );
-  }
-
-  getHardwaresWithString(pattern: string): Observable<Hardware[]>{
-    const url = `${this.hardwareUrl}` + `?pattern=${pattern}`;
-    return this.http.get<Hardware[]>(url)
-    .pipe(
-      tap(_ => console.log(`fetched hardware with pattern ${pattern}`)),
-      catchError(this.handleError<Hardware[]>(`getHardwaresWithString`))
     );
   }
 

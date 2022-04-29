@@ -46,7 +46,9 @@ export class HardwareEditComponent implements OnInit {
 
     var type : HardwareType = (<any>HardwareType)[typeString];
 
-    this.hardwareService.updateHardware({ code, name, price, type, available } as Hardware).subscribe(
+    var id: number = this.hardware.id;
+
+    this.hardwareService.updateHardware({ id, code, name, price, type, available } as Hardware).subscribe(
       (hardware: Hardware) => {
         this.hardware = hardware;
         console.log('Uspjesno spremljeni podatci!');

@@ -57,9 +57,9 @@ public class HardwareController {
                 );
     }
 
-    @PutMapping("/{code}")
-    public ResponseEntity<HardwareDTO> update(@PathVariable String code, @Valid @RequestBody final HardwareCommand command){
-        return hardwareService.update(code, command)
+    @PutMapping("/{id}")
+    public ResponseEntity<HardwareDTO> update(@PathVariable Long id, @Valid @RequestBody final HardwareCommand command){
+        return hardwareService.update(id, command)
                 .map(ResponseEntity::ok
                 )
                 .orElseGet(
@@ -73,14 +73,5 @@ public class HardwareController {
     @DeleteMapping("/{code}")
     public void deleteHardwareByCode(@PathVariable String code){
         hardwareService.deleteHardwareByCode(code);
-    }
-
-    @GetMapping(params = {"min", "max"})
-    public List<HardwareDTO> findBetweenPrices(@RequestParam("min") final Double min, @RequestParam("max") final Double max){
-        return hardwareService.findBetweenPrices(min, max);
-    }
-    @GetMapping(params = {"pattern"})
-    public List<HardwareDTO> findWithString(@RequestParam("pattern") final String pattern){
-        return hardwareService.findWithString(pattern);
     }
 }

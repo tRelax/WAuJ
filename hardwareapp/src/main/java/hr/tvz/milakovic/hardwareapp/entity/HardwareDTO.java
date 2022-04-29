@@ -6,6 +6,7 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 public class HardwareDTO {
+    Long id;
     String code;
     String name;
     Double price;

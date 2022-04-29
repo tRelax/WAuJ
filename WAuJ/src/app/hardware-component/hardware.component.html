@@ -83,50 +83,6 @@
         Unesi hardver
     </button>
 </div>
-
-<!--
-<div class="row col-md-3 ms-2">
-    <h3>Pretrazi po cijenama</h3>
-    <div>
-        <label>Min:
-            <div>
-                <input type="number" #minPrice />
-            </div>
-        </label>
-    </div>
-    <div>
-        <label>Max:
-            <div>
-                <input type="number" #maxPrice />
-            </div>
-        </label>
-    </div>
-
-    <button 
-        class="col-md-5 mt-2 ms-2"
-    (click)="
-        getHardwaresBetweenPrices(+minPrice.value, +maxPrice.value);">
-        Pretrazi
-    </button>
-</div>
--->
-<div class="row col-md-3 ms-2">
-    <h3>Pretrazi po nazivu</h3>
-    <div>
-        <label>Naziv:
-            <div>
-                <input #pattern />
-            </div>
-        </label>
-    </div>
-
-    <button 
-        class="col-md-5 mt-2 ms-2"
-    (click)="
-        getHardwaresWithString(pattern.value);">
-        Pretrazi
-    </button>
-</div>
 <router-outlet></router-outlet>
 
 <!--<app-hardware-detail [hardware]="selectedHardware"></app-hardware-detail>-->
