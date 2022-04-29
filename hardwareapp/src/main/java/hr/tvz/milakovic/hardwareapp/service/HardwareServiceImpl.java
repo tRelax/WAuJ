@@ -26,13 +26,6 @@ public class HardwareServiceImpl implements HardwareService {
 
     @Override
     public Optional<HardwareDTO> findByCode(String code) {
-//        Optional<Hardware> temp = hardwareRepository.findByCode(code);
-//        if (temp.get().getType().equals(HardwareType.OTHER) && temp.get().getAvailable() > 100){
-//            HardwareDTO tempDTO = mapHardwareToDTO(temp.get());
-//            tempDTO.setPrice(tempDTO.getPrice() * 0.75);
-//            return tempDTO;
-//        }
-//        return mapHardwareToDTO(temp.get());
         return hardwareRepository.findByCode(code).map(this::mapHardwareToDTO);
     }
 
@@ -48,18 +41,8 @@ public class HardwareServiceImpl implements HardwareService {
 
 
     @Override
-    public Optional<HardwareDTO> update(String code, HardwareCommand command) {
-        return hardwareRepository.update(code, mapCommandToHardware(command)).map(this::mapHardwareToDTO);
-    }
-
-    @Override
-    public List<HardwareDTO> findBetweenPrices(Double min, Double max) {
-        return hardwareRepository.findBetweenPrices(min, max).stream().map(this::mapHardwareToDTO).collect(Collectors.toList());
-    }
-
-    @Override
-    public List<HardwareDTO> findWithString(String pattern) {
-        return hardwareRepository.findWithString(pattern).stream().map(this::mapHardwareToDTO).collect(Collectors.toList());
+    public Optional<HardwareDTO> update(Long id, HardwareCommand command) {
+        return hardwareRepository.update(id, mapCommandToHardware(command)).map(this::mapHardwareToDTO);
     }
 
     @Override
@@ -67,11 +50,11 @@ public class HardwareServiceImpl implements HardwareService {
         hardwareRepository.deleteByCode(code);
     }
 
-    public HardwareDTO mapHardwareToDTO(Hardware hardware){
-        return new HardwareDTO(hardware.getCode(), hardware.getName(), hardware.getPrice(), hardware.getType(), hardware.getAvailable());
+    public HardwareDTO mapHardwareToDTO(Hardware hardware) {
+        return new HardwareDTO(hardware.getId(), hardware.getCode(), hardware.getName(), hardware.getPrice(), hardware.getType(), hardware.getAvailable());
     }
 
     private Hardware mapCommandToHardware(HardwareCommand command) {
-        return new Hardware(command.getCode(), command.getName(), command.getPrice(), command.getType(), command.getAvailable());
+        return new Hardware(command.getId(), command.getCode(), command.getName(), command.getPrice(), command.getType(), command.getAvailable());
     }
 }

@@ -8,6 +8,8 @@ import javax.validation.constraints.*;
 @Data
 public class HardwareCommand {
 
+    private Long id;
+
     @NotBlank(message = "Code must not be empty")
     private String code;
 

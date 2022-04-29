@@ -11,10 +11,6 @@ public interface HardwareRepository{
     List<Hardware> findAll();
     Optional<Hardware> findByCode(String code);
     Optional<Hardware> save(Hardware hardware);
-    Optional<Hardware> update(String code, Hardware updatedHardware);
+    Optional<Hardware> update(Long id, Hardware updatedHardware);
     void deleteByCode(String code);
-
-    List<Hardware> findBetweenPrices(Double min, Double max);
-    List<Hardware> findWithString(String pattern);
-
 }

@@ -14,11 +14,7 @@ public interface HardwareService {
 
     Optional<HardwareDTO> save(HardwareCommand command);
 
-    Optional<HardwareDTO> update(String code, HardwareCommand command);
-
-    List<HardwareDTO> findBetweenPrices(Double min, Double max);
-
-    List<HardwareDTO> findWithString(String pattern);
+    Optional<HardwareDTO> update(Long id, HardwareCommand command);
 
     void deleteHardwareByCode(String code);
 }

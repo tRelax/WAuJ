@@ -7,6 +7,7 @@ import lombok.*;
 @NoArgsConstructor
 //TODO add id and all its features
 public class Hardware {
+    private Long id;
     private String code;
     private String name;
     private Double price;

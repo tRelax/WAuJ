@@ -13,9 +13,9 @@ public class HardwareRepositoryImpl implements HardwareRepository {
 
     private List<Hardware> hardwareList = new ArrayList<>(
             Arrays.asList(
-            new Hardware("CPU0001", "AMD Ryzen 7 5800X", 4220.00, HardwareType.CPU, 1),
-                new Hardware("GPU0001", "Palit GeForce RTX 2060 Dual 12GB GDDR6", 5554.44, HardwareType.GPU, 8),
-                new Hardware("OTH0001", "Other Test Object", 1000.00, HardwareType.OTHER, 101)
+            new Hardware(1L, "CPU0001", "AMD Ryzen 7 5800X", 4220.00, HardwareType.CPU, 1),
+                new Hardware(2L, "GPU0001", "Palit GeForce RTX 2060 Dual 12GB GDDR6", 5554.44, HardwareType.GPU, 8),
+                new Hardware(3L,"OTH0001", "Other Test Object", 1000.00, HardwareType.OTHER, 101)
             )
     );
 
@@ -45,9 +45,9 @@ public class HardwareRepositoryImpl implements HardwareRepository {
     }
 
     @Override
-    public Optional<Hardware> update(String code, Hardware updatedHardware) {
+    public Optional<Hardware> update(Long id, Hardware updatedHardware) {
         for (Hardware h : hardwareList){
-            boolean sameCode = code.equals(h.getCode());
+            boolean sameCode = id.equals(h.getId());
             if (sameCode){
                 Hardware hTemp = h;
                 hTemp.setPrice(updatedHardware.getPrice());
@@ -56,7 +56,7 @@ public class HardwareRepositoryImpl implements HardwareRepository {
         }
 
         boolean exists = hardwareList.removeIf(
-                h -> Objects.equals(h.getCode(), code) && Objects.equals(h.getCode(), updatedHardware.getCode())
+                h -> Objects.equals(h.getId(), id) && Objects.equals(h.getId(), updatedHardware.getId())
         );
 
         if(exists){
@@ -71,15 +71,5 @@ public class HardwareRepositoryImpl implements HardwareRepository {
     @Override
     public void deleteByCode(String code) {
         hardwareList.removeIf(h -> Objects.equals(h.getCode(), code));
-    }
-
-    @Override
-    public List<Hardware> findBetweenPrices(Double min, Double max) {
-        return null;
-    }
-
-    @Override
-    public List<Hardware> findWithString(String pattern) {
-        return null;
     }
 }

@@ -43,8 +43,9 @@ export class HardwareComponent implements OnInit {
 
     var type : HardwareType = (<any>HardwareType)[typeString];
 
+    var id: number = 0;
 
-    this.hardwareService.addHardware({ code, name, price, type, available } as Hardware)
+    this.hardwareService.addHardware({ id, code, name, price, type, available } as Hardware)
     .subscribe(hardware => {
       this.hardwares.push(hardware);
     })
@@ -61,14 +62,6 @@ export class HardwareComponent implements OnInit {
 
   editHardware(code: string): void{
     this.router.navigate(['/hardwares/edit', code]);
-  }
-
-  getHardwaresBetweenPrices(min: number, max: number): void{
-    this.hardwareService.getHardwaresBetweenPrices(min, max).subscribe(hardwares => this.hardwares = hardwares);
-  }
-
-  getHardwaresWithString(pattern: string): void{
-    this.hardwareService.getHardwaresWithString(pattern).subscribe(hardwares => this.hardwares = hardwares);
   }
 
 }
