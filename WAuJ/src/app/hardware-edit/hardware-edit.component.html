@@ -1,0 +1,50 @@
+<div *ngIf="hardware"  class="list-group-item list-group-item-dark col-md-6 ms-2">
+    <div class="row col-md-3 ms-2">
+        <h3>Unesi novi hardware</h3>
+        <div>
+            <label>Naziv:
+                <div>
+                    <input #hardwareName value="{{hardware.name}}" />
+                </div>
+            </label>
+        </div>
+        <div>
+            <label>Cijena:
+                <div>
+                    <input type="number" #hardwarePrice value="{{hardware.price}}" />
+                </div>
+            </label>
+        </div>
+        <div>
+            <label>Tip:
+                <div>
+                    <select #hardwareType>
+                        <option value="{{hardwareTypeString}}" selected disabled hidden>{{hardwareTypeString}}</option>
+                        <option value="CPU">CPU</option>
+                        <option value="GPU">GPU</option>
+                        <option value="MBO">MBO</option>
+                        <option value="RAM">RAM</option>
+                        <option value="STORAGE">STORAGE</option>
+                        <option value="OTHER">OTHER</option>
+                    </select>
+                </div>
+            </label>
+        </div>
+        <div>
+            <label>Broj artikala:
+                <div>
+                    <input type="number" #hardwareAvailable value="{{hardware.available}}" />
+                </div>
+            </label>
+        </div>
+    
+        <button 
+            class="col-md-5 mt-2 ms-2"
+            (click)="update(hardware.code, hardwareName.value, +hardwarePrice.value, hardwareType.value, +hardwareAvailable.value);"
+            >
+            Izmjeni hardver
+        </button>
+        
+        <!---->
+    </div>
+</div>
