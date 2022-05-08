@@ -1,6 +1,7 @@
 package hr.tvz.milakovic.hardwareapp.command;
 
 import hr.tvz.milakovic.hardwareapp.entity.HardwareType;
+import hr.tvz.milakovic.hardwareapp.entity.Review;
 import lombok.Data;
 
 import javax.validation.constraints.*;
@@ -26,4 +27,6 @@ public class HardwareCommand {
     @PositiveOrZero(message = "Available must be positive or zero")
     @NotNull(message = "Available must be entered")
     private Integer available;
+
+//    private Review review;
 }
