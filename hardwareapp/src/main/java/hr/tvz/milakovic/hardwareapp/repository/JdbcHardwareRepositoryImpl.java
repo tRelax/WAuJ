@@ -18,7 +18,7 @@ import java.util.*;
 public class JdbcHardwareRepositoryImpl implements HardwareRepository {
 
     private static final String SELECT_ALL =
-            "SELECT id, code, name, price, type, available FROM hardwares";
+            "SELECT id, code, name, price, type, available FROM hardware";
 
     private final JdbcTemplate jdbc;
     private final SimpleJdbcInsert inserter;
@@ -26,7 +26,7 @@ public class JdbcHardwareRepositoryImpl implements HardwareRepository {
     public JdbcHardwareRepositoryImpl(JdbcTemplate jdbc) {
         this.jdbc = jdbc;
         this.inserter = new SimpleJdbcInsert(jdbc)
-                .withTableName("hardwares")
+                .withTableName("hardware")
                 .usingGeneratedKeyColumns("id");
     }
 
@@ -70,7 +70,7 @@ public class JdbcHardwareRepositoryImpl implements HardwareRepository {
 
     @Override
     public Optional<Hardware> update(Long id, Hardware updatedHardware) {
-        int executed = jdbc.update("UPDATE hardwares set " +
+        int executed = jdbc.update("UPDATE hardware set " +
                 "code = ?, " +
                 "name = ?, " +
                 "price = ?, " +
@@ -94,11 +94,12 @@ public class JdbcHardwareRepositoryImpl implements HardwareRepository {
 
     @Override
     public void deleteByCode(String code) {
-        jdbc.update( "DELETE FROM hardwares WHERE code = ?", code);
+        jdbc.update( "DELETE FROM hardware WHERE code = ?", code);
     }
 
     private Hardware mapRowToHardware(ResultSet rs, int rowNum) throws SQLException {
         HardwareType tempType = HardwareType.valueOf(rs.getString("type"));
+
         return new Hardware(
                 rs.getLong("id"),
                 rs.getString("code"),

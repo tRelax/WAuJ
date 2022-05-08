@@ -4,11 +4,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { HardwareComponent } from './hardware-component/hardware.component';
-import { HardwareDetailComponent } from './hardware-detail/hardware-detail.component';
-import { HardwarePriceComponent } from './hardware-price/hardware-price.component';
-import { AppRoutingModule } from './app-routing.module';
-import { HardwareEditComponent } from './hardware-edit/hardware-edit.component';
+import { HardwarePriceComponent } from './hardware/hardware-price/hardware-price.component';
+import { AppRoutingModule } from './routing/app-routing.module';
+import { HardwareComponent } from './hardware/hardware-component/hardware.component';
+import { HardwareDetailComponent } from './hardware/hardware-detail/hardware-detail.component';
+import { HardwareEditComponent } from './hardware/hardware-edit/hardware-edit.component';
 
 @NgModule({
   declarations: [
