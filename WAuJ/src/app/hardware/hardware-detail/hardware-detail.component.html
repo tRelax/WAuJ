@@ -1,0 +1,17 @@
+<div *ngIf="hardware"  class="list-group-item list-group-item-dark col-md-6 ms-2 mt-2">
+
+    <h2>{{hardware.name}} - details of hardware</h2>
+    <div><span>Name: </span>{{hardware.name}}</div>
+    <div><span>Price: </span>{{hardware.price}}HRK</div>
+</div>
+<div class="col-md-6 ms-2" *ngIf="reviews">
+    <div class="card">
+        <h5 class="card-title ms-2 mt-2">Recenzije:</h5>
+        <div class="card-body">
+            <div class="col-md-12" *ngFor="let review of reviews">
+                <div>{{review.title}} - <b>{{review.score}}/5</b></div>
+            </div>
+        </div>
+    </div>
+</div>
+<button routerLink="/hardwares" type="button" class="btn btn-outline-info ms-2 mt-2">Go back</button>

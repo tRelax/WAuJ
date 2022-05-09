@@ -1,0 +1,20 @@
+.liForComponent{
+    display: inline-block;
+}
+
+.liForComponent > *{
+    vertical-align: middle;
+}
+
+.pcSVG, .componentSpan{
+    float: left;
+}
+
+.editSVG, .deleteSVG{
+    float: right;
+}
+
+.editSVG:hover, .deleteSVG:hover{
+    background-color: rgb(235, 235, 224);
+    border-radius: 25%;
+}
