@@ -29,6 +29,11 @@ public class HardwareServiceImpl implements HardwareService {
         return hardwareRepository.findByCode(code).map(this::mapHardwareToDTO);
     }
 
+    @Override
+    public Optional<HardwareDTO> findById(Long id) {
+        return hardwareRepository.findById(id).map(this::mapHardwareToDTO);
+    }
+
 //    @Override
 //    public List<HardwareDTO> findAllWithPriceLowerThen(Double priceLowerThen) {
 //        return hardwareRepository.findAllWithPriceLowerThen(priceLowerThen).stream().map(this::mapHardwareToDTO).collect(Collectors.toList());

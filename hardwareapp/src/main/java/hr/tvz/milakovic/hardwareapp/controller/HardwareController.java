@@ -41,6 +41,17 @@ public class HardwareController {
                                 .build()
                 );
     }
+    @GetMapping(params = "id")
+    public ResponseEntity<HardwareDTO> findHardwareById(@RequestParam final Long id){
+
+        return hardwareService.findById(id)
+                .map(ResponseEntity::ok)
+                .orElseGet(
+                        () -> ResponseEntity
+                                .notFound()
+                                .build()
+                );
+    }
 
     @PostMapping
     public ResponseEntity<HardwareDTO> save(@Valid @RequestBody final HardwareCommand command){

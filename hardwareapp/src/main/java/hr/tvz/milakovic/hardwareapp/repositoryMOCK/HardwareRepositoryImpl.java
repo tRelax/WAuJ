@@ -29,6 +29,11 @@ public class HardwareRepositoryImpl implements HardwareRepository {
         return hardwareList.stream().filter(it -> it.getCode().equals(code)).findAny();
     }
 
+    @Override
+    public Optional<Hardware> findById(Long id) {
+        return Optional.empty();
+    }
+
 //    @Override
 //    public List<Hardware> findAllWithPriceLowerThen(Double priceLowerThen) {
 //        return hardwareList.stream().filter(h -> h.getPrice() < priceLowerThen).collect(Collectors.toList());

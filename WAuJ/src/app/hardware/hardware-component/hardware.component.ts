@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Review } from 'src/app/review/review';
 import { ReviewService } from 'src/app/review/review.service';
 import { Hardware } from '../hardware';
 import { HardwareType } from '../hardware-type';
@@ -13,15 +14,19 @@ import { HardwareService } from '../hardware.service';
 export class HardwareComponent implements OnInit {
 
   hardwares: Hardware[];
+  reviews: Review[];
   selectedHardware: Hardware;
 
   constructor(
     private hardwareService: HardwareService,
+    private reviewService: ReviewService,
     private router: Router
     ) { }
 
   ngOnInit(): void {
+
     this.getHardwares();
+    this.getReviews();
   }
 
   getHardwares(): void{
@@ -63,6 +68,18 @@ export class HardwareComponent implements OnInit {
 
   editHardware(code: string): void{
     this.router.navigate(['/hardwares/edit', code]);
+  }
+
+  getReviewsByContent(clip: string): void{
+    this.reviewService.getReviewsByContent(clip).subscribe(reviews => this.reviews = reviews);
+  }
+
+  getReviewsBetweenScores(min: number, max: number): void{
+    this.reviewService.getReviewsBetweenScore(min, max).subscribe(reviews => this.reviews = reviews);
+  }
+
+  getReviews(): void{
+    this.reviewService.getReviews().subscribe(reviews => this.reviews = reviews);
   }
 
 }

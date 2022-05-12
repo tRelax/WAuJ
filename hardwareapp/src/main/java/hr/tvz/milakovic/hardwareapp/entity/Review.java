@@ -18,6 +18,7 @@ public class Review {
     private Long id;
 
     private String title;
+    private String content;
     private Integer score;
 
     @ManyToOne

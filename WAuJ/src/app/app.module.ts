@@ -9,6 +9,7 @@ import { AppRoutingModule } from './routing/app-routing.module';
 import { HardwareComponent } from './hardware/hardware-component/hardware.component';
 import { HardwareDetailComponent } from './hardware/hardware-detail/hardware-detail.component';
 import { HardwareEditComponent } from './hardware/hardware-edit/hardware-edit.component';
+import { ReviewDetailComponent } from './review/review-detail/review-detail.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HardwareEditComponent } from './hardware/hardware-edit/hardware-edit.co
     HardwareComponent,
     HardwareDetailComponent,
     HardwarePriceComponent,
-    HardwareEditComponent
+    HardwareEditComponent,
+    ReviewDetailComponent
   ],
   imports: [
     BrowserModule,

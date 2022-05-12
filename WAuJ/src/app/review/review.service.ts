@@ -37,6 +37,36 @@ export class ReviewService {
       );
   }
 
+  getReviewsByContent(clip: String): Observable<Review[]> {
+    const url = `${this.reviewUrl}?clip=${clip}`;
+
+    return this.http.get<Review[]>(url)
+      .pipe(
+        tap(_ => console.log(`fetched reviews that have clip=${clip}`)),
+        catchError(this.handleError<Review[]>(`getReviewsByClip clip=${clip}`, []))
+      );
+  }
+
+  getReviewsBetweenScore(min: number, max: number): Observable<Review[]> {
+    const url = `${this.reviewUrl}?min=${min}&max=${max}`;
+
+    return this.http.get<Review[]>(url)
+      .pipe(
+        tap(_ => console.log(`fetched reviews between scores ${min}-${max}`)),
+        catchError(this.handleError<Review[]>(`getReviewsBetweenScores ${min}-${max}`, []))
+      );
+  }
+
+  getReviewById(id: number): Observable<Review> {
+    const url = `${this.reviewUrl}?id=${id}`;
+
+    return this.http.get<Review>(url)
+      .pipe(
+        tap(_ => console.log(`fetched review that have id=${id}`)),
+        catchError(this.handleError<Review>(`getReviewsById clip=${id}`))
+      );
+  }
+
   private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
       console.error(operation);
