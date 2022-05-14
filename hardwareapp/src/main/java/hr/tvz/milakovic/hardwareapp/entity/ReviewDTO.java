@@ -8,6 +8,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ReviewDTO {
+    private Long id;
     private String title;
+    private String content;
     private Integer score;
+    private Long hardwareId;
 }

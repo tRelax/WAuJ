@@ -35,6 +35,15 @@ export class HardwareService {
     );
   }
 
+  getHardwareById(id: number): Observable<Hardware> {
+    const url = `${this.hardwareUrl}?id=${id}`;
+    return this.http.get<Hardware>(url)
+    .pipe(
+      tap(_ => console.log(`fetched hardware with id=${id}`)),
+      catchError(this.handleError<Hardware>(`getHardwareById id=${id}`))
+    );
+  }
+
   updateHardware(hardware: Hardware): Observable<any> {
     const url = `${this.hardwareUrl}/${hardware.id}`;
     return this.http.put(url, hardware)

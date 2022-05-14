@@ -28,5 +28,4 @@ public class HardwareCommand {
     @NotNull(message = "Available must be entered")
     private Integer available;
 
-//    private Review review;
 }

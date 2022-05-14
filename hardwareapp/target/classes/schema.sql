@@ -14,6 +14,7 @@ create table if not exists hardware (
 create table if not exists review(
     id bigint primary key auto_increment,
     title varchar(255) not null,
+    content varchar(255) not null,
     score tinyint(1) not null,
     hardware_id int not null,
     FOREIGN KEY (hardware_id) REFERENCES hardware(id) on delete cascade

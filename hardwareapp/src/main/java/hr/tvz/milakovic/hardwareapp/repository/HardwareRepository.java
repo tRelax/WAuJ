@@ -10,6 +10,7 @@ public interface HardwareRepository{
 
     List<Hardware> findAll();
     Optional<Hardware> findByCode(String code);
+    Optional<Hardware> findById(Long id);
     Optional<Hardware> save(Hardware hardware);
     Optional<Hardware> update(Long id, Hardware updatedHardware);
     void deleteByCode(String code);

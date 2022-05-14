@@ -47,6 +47,17 @@ public class JdbcHardwareRepositoryImpl implements HardwareRepository {
     }
 
     @Override
+    public Optional<Hardware> findById(Long id) {
+        try {
+            return Optional.ofNullable(
+                    jdbc.queryForObject(SELECT_ALL + " WHERE id = ? ", this::mapRowToHardware, id)
+            );
+        } catch (EmptyResultDataAccessException e) {
+            return Optional.empty();
+        }
+    }
+
+    @Override
     public Optional<Hardware> save(Hardware hardware) {
         try {
             hardware.setId(saveHardwareDetails(hardware));

@@ -1,6 +1,6 @@
 <h2 class="ms-2">List of hardware</h2>
 <ul class="list-group hardwares mb-5">
-    <div class="row col-md-4 ms-2">
+    <div class="row col-md-10 ms-2">
         <li class="list-group-item list-group-item-action liForComponent"
             *ngFor="let hardware of hardwares"
             (click)="onSelect(hardware)"
@@ -11,7 +11,7 @@
               </svg>
               <span class="ms-3 componentSpan">{{hardware.code}}</span>
               <span class="ms-3 componentSpan">{{hardware.name}}</span>
-              <span class="ms-3 componentSpan">{{hardware.price}}</span>
+              <span class="ms-3 componentSpan">{{hardware.price}} HRK</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-pencil-square editSVG" viewBox="0 0 16 16" (click)="editHardware(hardware.code)">
                 <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
                 <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
@@ -93,6 +93,44 @@
         hardwareAvailable.value=''">
         Reset
     </button>
+</div>
+
+<div class="row col-md-3 ms-2 mt-2">
+    <h3>Unesi raspon</h3>
+    <div>
+        <label>
+            <div>
+                <span>min</span>
+                <div>
+                    <input type="number" #min />
+                </div>
+            </div>
+        </label>
+    </div>
+    <div>
+        <label>
+            <div>
+                <span>max</span> 
+                <div>
+                    <input type="number" #max />
+                </div>
+            </div>
+        </label>
+    </div>
+    <button 
+    class="row col-md-3 btn btn-outline-success mt-2 ms-3"
+    (click)="getReviewsBetweenScores(+min.value, +max.value);">
+    Pretraži
+</button>
+</div>
+<div class="row col-md-6 ms-2 mt-2">
+    <li class="list-group-item list-group-item-action liForComponent"
+        *ngFor="let review of reviews"
+        [routerLink]="['/review', review.id]">
+        <span class="ms-3 componentSpan">{{review.title}}</span>
+        <span class="ms-3 componentSpan">{{review.score}}</span>
+        <span class="ms-3 componentSpan">{{review.content}}</span>
+    </li>
 </div>
 <router-outlet></router-outlet>
 

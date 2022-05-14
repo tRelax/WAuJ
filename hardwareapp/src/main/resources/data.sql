@@ -9,20 +9,20 @@ insert into hardware (code, name, price, type, available)
 insert into hardware (code, name, price, type, available)
     values ('003', 'Other Test Object', 1000.00, 'OTHER', 101);
 
-insert into review(title, score, hardware_id)
-values ( 'dosta dobro', 3, 1 );
+insert into review(title, content, score, hardware_id)
+values ( 'amd1', 'dosta dobro', 3, 1 );
 
-insert into review(title, score, hardware_id)
-values ( 'bio sam vrlo pijan kad sam ovo kupio i sada trijezan shvacam kako je to lose', 1, 1 );
+insert into review(title, content, score, hardware_id)
+values ( 'amd2', 'bio sam vrlo pijan kad sam ovo kupio i sada trijezan shvacam kako je to lose', 1, 1 );
 
-insert into review(title, score, hardware_id)
-values ( 'samo meh', 2, 2 );
+insert into review(title, content, score, hardware_id)
+values ( 'palit1', 'samo meh', 2, 2 );
 
-insert into review(title, score, hardware_id)
-values ( 'ovo je najbolja stvar koju sam ikad imao preporucujem!!!!!', 5, 2 );
+insert into review(title, content, score, hardware_id)
+values ( 'palit2', 'ovo je najbolja stvar koju sam ikad imao preporucujem!!!!!', 5, 2 );
 
-insert into review(title, score, hardware_id)
-values ( 'wauwweve, nez ovo je samo eh', 3, 3 );
+insert into review(title, content, score, hardware_id)
+values ( 'other1', 'wauwweve, nez ovo je samo eh', 3, 3 );
 
-insert into review(title, score, hardware_id)
-values ( 'najgora stvar koju imam', 1, 3 );
+insert into review(title, content, score, hardware_id)
+values ( 'other2', 'najgora stvar koju imam', 1, 3 );
