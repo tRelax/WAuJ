@@ -1,7 +1,6 @@
 package hr.tvz.milakovic.hardwareapp.command;
 
-import hr.tvz.milakovic.hardwareapp.entity.HardwareType;
-import hr.tvz.milakovic.hardwareapp.entity.Review;
+import hr.tvz.milakovic.hardwareapp.enums.HardwareType;
 import lombok.Data;
 
 import javax.validation.constraints.*;

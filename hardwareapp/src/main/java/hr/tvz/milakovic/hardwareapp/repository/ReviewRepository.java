@@ -9,6 +9,4 @@ import java.util.Optional;
 public interface ReviewRepository extends JpaRepository<Review, Long> {
 
     List<Review> findAllByHardwareCode(String code);
-    List<Review> findAllByContentContainingIgnoreCase(String clip);
-    List<Review> findByScoreBetween(Integer min, Integer max);
 }

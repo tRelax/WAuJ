@@ -1,15 +1,15 @@
 package hr.tvz.milakovic.hardwareapp.controller;
 
 import hr.tvz.milakovic.hardwareapp.command.HardwareCommand;
-import hr.tvz.milakovic.hardwareapp.entity.HardwareDTO;
+import hr.tvz.milakovic.hardwareapp.DTO.HardwareDTO;
 import hr.tvz.milakovic.hardwareapp.service.HardwareService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/hardware")
@@ -22,6 +22,7 @@ public class HardwareController {
     }
 
     @GetMapping()
+    @Secured({"ROLE_ADMIN", "ROLE_USER"})
     public List<HardwareDTO> findAllHardware(){
         return hardwareService.findAll();
     }
@@ -32,6 +33,7 @@ public class HardwareController {
 //    }
 
     @GetMapping("/{code}")
+    @Secured({"ROLE_ADMIN", "ROLE_USER", "ROLE_DELETER"})
     public ResponseEntity<HardwareDTO> findAllHardwareByCode(@PathVariable final String code){
         return hardwareService.findByCode(code)
                 .map(ResponseEntity::ok)
@@ -42,6 +44,7 @@ public class HardwareController {
                 );
     }
     @GetMapping(params = "id")
+    @Secured({"ROLE_ADMIN", "ROLE_USER"})
     public ResponseEntity<HardwareDTO> findHardwareById(@RequestParam final Long id){
 
         return hardwareService.findById(id)
@@ -54,6 +57,7 @@ public class HardwareController {
     }
 
     @PostMapping
+    @Secured({"ROLE_ADMIN"})
     public ResponseEntity<HardwareDTO> save(@Valid @RequestBody final HardwareCommand command){
         return hardwareService.save(command)
                 .map(
@@ -69,6 +73,7 @@ public class HardwareController {
     }
 
     @PutMapping("/{id}")
+    @Secured({"ROLE_ADMIN"})
     public ResponseEntity<HardwareDTO> update(@PathVariable Long id, @Valid @RequestBody final HardwareCommand command){
         return hardwareService.update(id, command)
                 .map(ResponseEntity::ok
@@ -82,6 +87,7 @@ public class HardwareController {
 
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @DeleteMapping("/{code}")
+    @Secured({"ROLE_ADMIN"})
     public void deleteHardwareByCode(@PathVariable String code){
         hardwareService.deleteHardwareByCode(code);
     }

@@ -2,7 +2,7 @@ package hr.tvz.milakovic.hardwareapp.service;
 
 import hr.tvz.milakovic.hardwareapp.command.HardwareCommand;
 import hr.tvz.milakovic.hardwareapp.entity.Hardware;
-import hr.tvz.milakovic.hardwareapp.entity.HardwareDTO;
+import hr.tvz.milakovic.hardwareapp.DTO.HardwareDTO;
 import hr.tvz.milakovic.hardwareapp.repository.HardwareRepository;
 import org.springframework.stereotype.Service;
 
