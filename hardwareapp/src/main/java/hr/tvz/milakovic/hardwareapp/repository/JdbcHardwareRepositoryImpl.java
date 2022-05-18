@@ -1,7 +1,7 @@
 package hr.tvz.milakovic.hardwareapp.repository;
 
 import hr.tvz.milakovic.hardwareapp.entity.Hardware;
-import hr.tvz.milakovic.hardwareapp.entity.HardwareType;
+import hr.tvz.milakovic.hardwareapp.enums.HardwareType;
 import org.springframework.context.annotation.Primary;
 import org.springframework.dao.DuplicateKeyException;
 import org.springframework.dao.EmptyResultDataAccessException;

@@ -19,7 +19,7 @@ public class Review {
 
     private String title;
     private String content;
-    private Integer score;
+    private Integer rating;
 
     @ManyToOne
     @JoinColumn(name = "hardware_id")

@@ -1,7 +1,7 @@
 package hr.tvz.milakovic.hardwareapp.service;
 
 import hr.tvz.milakovic.hardwareapp.command.HardwareCommand;
-import hr.tvz.milakovic.hardwareapp.entity.HardwareDTO;
+import hr.tvz.milakovic.hardwareapp.DTO.HardwareDTO;
 
 import java.util.List;
 import java.util.Optional;

@@ -1,9 +1,8 @@
 package hr.tvz.milakovic.hardwareapp.repositoryMOCK;
 
 import hr.tvz.milakovic.hardwareapp.entity.Hardware;
-import hr.tvz.milakovic.hardwareapp.entity.HardwareType;
+import hr.tvz.milakovic.hardwareapp.enums.HardwareType;
 import hr.tvz.milakovic.hardwareapp.repository.HardwareRepository;
-import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Repository;
 
 import java.util.*;

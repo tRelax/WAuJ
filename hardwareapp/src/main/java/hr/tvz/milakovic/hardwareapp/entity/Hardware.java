@@ -1,5 +1,6 @@
 package hr.tvz.milakovic.hardwareapp.entity;
 
+import hr.tvz.milakovic.hardwareapp.enums.HardwareType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
