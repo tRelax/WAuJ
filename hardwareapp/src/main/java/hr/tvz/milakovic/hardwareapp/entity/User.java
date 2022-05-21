@@ -2,12 +2,17 @@ package hr.tvz.milakovic.hardwareapp.entity;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.BatchSize;
 
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
-
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 public class User {
 
@@ -29,31 +34,4 @@ public class User {
     )
     @BatchSize(size = 20)
     private Set<Authority> authorities = new HashSet<>();
-
-
-    public User() {
-    }
-
-    public User(Long id, String username, String password, Set<Authority> authorities) {
-        this.id = id;
-        this.username = username;
-        this.password = password;
-        this.authorities = authorities;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public Set<Authority> getAuthorities() {
-        return authorities;
-    }
 }
