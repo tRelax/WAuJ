@@ -22,7 +22,7 @@ public class HardwareController {
     }
 
     @GetMapping()
-    @Secured({"ROLE_ADMIN", "ROLE_USER"})
+    @Secured({"ROLE_ADMIN", "ROLE_USER", "ROLE_DELETER"})
     public List<HardwareDTO> findAllHardware(){
         return hardwareService.findAll();
     }
@@ -44,7 +44,7 @@ public class HardwareController {
                 );
     }
     @GetMapping(params = "id")
-    @Secured({"ROLE_ADMIN", "ROLE_USER"})
+    @Secured({"ROLE_ADMIN", "ROLE_USER", "ROLE_DELETER"})
     public ResponseEntity<HardwareDTO> findHardwareById(@RequestParam final Long id){
 
         return hardwareService.findById(id)
@@ -87,7 +87,7 @@ public class HardwareController {
 
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @DeleteMapping("/{code}")
-    @Secured({"ROLE_ADMIN"})
+    @Secured({"ROLE_ADMIN", "ROLE_DELETER"})
     public void deleteHardwareByCode(@PathVariable String code){
         hardwareService.deleteHardwareByCode(code);
     }

@@ -20,19 +20,19 @@ public class ReviewController {
     }
 
     @GetMapping
-    @Secured({"ROLE_ADMIN", "ROLE_USER"})
+    @Secured({"ROLE_ADMIN", "ROLE_USER", "ROLE_DELETER"})
     public List<ReviewDTO> getAllReviews(){
         return reviewService.findAll();
     }
 
     @GetMapping(params= "code")
-    @Secured({"ROLE_ADMIN", "ROLE_USER"})
+    @Secured({"ROLE_ADMIN", "ROLE_USER", "ROLE_DELETER"})
     public List<ReviewDTO> getAllReviewsByHardwareCode(@RequestParam String code){
         return reviewService.findAllByHardwareCode(code);
     }
 
     @GetMapping(params = "id")
-    @Secured({"ROLE_ADMIN", "ROLE_USER"})
+    @Secured({"ROLE_ADMIN", "ROLE_USER", "ROLE_DELETER"})
     public ResponseEntity<ReviewDTO> getReviewById(@RequestParam Long id){
         return reviewService.findById(id).map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
