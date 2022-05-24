@@ -1,0 +1,67 @@
+{
+    "loginNavbar": {
+        "currentUsernameMessage": "Connecté en tant que",
+        "logout": "Se déconnecter"
+    },
+    "language": {
+        "change": "Changer de langue",
+        "croatian": "Croate",
+        "english": "Anglais",
+        "chinese": "Chinois",
+        "italian": "Italien",
+        "spanish": "Espagnol",
+        "french": "Français"
+    },
+    "navbar": {
+        "username": "Nom d'utilisateur",
+        "role": "Rôle",
+        "login": "Connexion",
+        "logout": "Déconnexion"
+    },
+    "login": {
+        "title": "Connexion",
+        "username": "Nom d'utilisateur",
+        "usernamePlaceholder": "Saisir le nom d'utilisateur",
+        "password": "Mot de passe",
+        "passwordPlaceholder": "Saisir le mot de passe",
+        "loginButton": "Connexion",
+        "loginError": "La connexion a échoué ! Vérifiez vos informations d'identification et réessayez."
+    },
+    "main": {
+        "hardwareLink": "Tours dures"
+    },
+    "404": {
+        "pageNotFoundMessage": "La page demandée n'a pas été trouvée",
+        "returnToHomepage": "Retourner à la page d'accueil"
+    },
+    "403": {
+        "pageForbiddenMessage": "Privilèges insuffisants pour accéder à cette page!",
+        "returnToHomepage": "Retourner à la page d'accueil"
+    },
+    "hardwers": {
+        "title": "Liste de matériel",
+        "create": "Ajouter un nouveau matériel",
+        "price": "Prix",
+        "details": "Détails",
+        "edit": "Modifier",
+        "delete": "Supprimer",
+        "createTitle": "Ajouter un nouveau matériel",
+        "editTitle": "Modifier le matériel",
+        "form": {
+            "code": "Code",
+            "name": "Nom",
+            "type": "Type",
+            "available": "Stock",
+            "price": "Prix",
+            "cancel": "Retourner",
+            "save": "Ajouter du matériel"
+        },
+        "detailsForm": {
+            "hardwareDetails": "Détails sur",
+            "ratesMessage6": "Ce matériel peut être acheté en 6 versements.",
+            "reviews": "Critiques pour ce matériel",
+            "zeroReviews": "Il n'y a actuellement aucune critique pour ce matériel",
+            "back": "Retourner en arrière"
+        }
+    }
+}

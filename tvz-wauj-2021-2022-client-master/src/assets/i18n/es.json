@@ -1,0 +1,67 @@
+{
+    "loginNavbar": {
+        "currentUsernameMessage": "Conectado como",
+        "logout": "Cerrar la sesión"
+    },
+    "language": {
+        "change": "Cambiar el idioma",
+        "croatian": "Croata",
+        "english": "Inglés",
+        "chinese": "Chino",
+        "italian": "Italiano",
+        "spanish": "Español",
+        "french": "Francés"
+    },
+    "navbar": {
+        "username": "Nombre de usuario",
+        "role": "Papel",
+        "login": "Inicio de sesión",
+        "logout": "Cierre de sesión"
+    },
+    "login": {
+        "title": "Inicio de sesión",
+        "username": "Nombre de usuario",
+        "usernamePlaceholder": "Introduzca su nombre de usuario",
+        "password": "Contraseña",
+        "passwordPlaceholder": "Introduzca la contraseña",
+        "loginButton": "Inicio de sesión",
+        "loginError": "Error en el inicio de sesión. Compruebe sus credenciales e inténtelo de nuevo."
+    },
+    "main": {
+        "hardwareLink": "Hardwers"
+    },
+    "404": {
+        "pageNotFoundMessage": "No se ha encontrado la página solicitada",
+        "returnToHomepage": "Volver a la página de inicio"
+    },
+    "403": {
+        "pageForbiddenMessage": "No tiene suficientes privilegios para acceder a esta página!",
+        "returnToHomepage": "Volver a la página de inicio"
+    },
+    "hardwers": {
+        "title": "Lista de hardware",
+        "create": "Añadir nuevo hardware",
+        "price": "Precio",
+        "details": "Detalles",
+        "edit": "Editar",
+        "delete": "Borrar",
+        "createTitle": "Añadir nuevo hardware",
+        "editTitle": "Editar el hardware",
+        "form": {
+            "code": "Código",
+            "name": "Nombre",
+            "type": "Tipo",
+            "available": "Stock",
+            "price": "Precio",
+            "cancel": "Volver",
+            "save": "Añadir hardware"
+        },
+        "detailsForm": {
+            "hardwareDetails": "Detalles sobre",
+            "ratesMessage6": "Este herraje se puede comprar en 6 plazos.",
+            "reviews": "Opiniones para este herraje",
+            "zeroReviews": "Actualmente no hay comentarios para este hardware",
+            "back": "Volver a la página anterior"
+        }
+    }
+}

@@ -1,0 +1,67 @@
+{
+    "loginNavbar": {
+        "currentUsernameMessage": "Accesso come",
+        "logout": "Esci"
+    },
+    "language": {
+        "change": "Cambia lingua",
+        "croatian": "Croato",
+        "english": "inglese",
+        "chinese": "Cinese",
+        "italian": "Italiano",
+        "spanish": "Spagnolo",
+        "french": "Francese"
+    },
+    "navbar": {
+        "username": "Nome utente",
+        "role": "Ruolo",
+        "login": "Accesso",
+        "logout": "Disconnessione"
+    },
+    "login": {
+        "title": "Accesso",
+        "username": "Nome utente",
+        "usernamePlaceholder": "Inserisci il nome utente",
+        "password": "Password",
+        "passwordPlaceholder": "Inserisci la password",
+        "loginButton": "Accesso",
+        "loginError": "Login fallito! Controlla le tue credenziali e riprova."
+    },
+    "main": {
+        "hardwareLink": "Duro"
+    },
+    "404": {
+        "pageNotFoundMessage": "La pagina richiesta non è stata trovata",
+        "returnToHomepage": "Torna alla pagina iniziale"
+    },
+    "403": {
+        "pageForbiddenMessage": "Privilegi insufficienti per accedere a questa pagina!",
+        "returnToHomepage": "Torna alla pagina iniziale"
+    },
+    "hardwers": {
+        "title": "Elenco hardware",
+        "create": "Aggiungi nuovo hardware",
+        "price": "Prezzo",
+        "details": "Dettagli",
+        "edit": "Modifica",
+        "delete": "Cancellare",
+        "createTitle": "Aggiungi nuova ferramenta",
+        "editTitle": "Modifica della ferramenta",
+        "form": {
+            "code": "Codice",
+            "name": "Nome",
+            "type": "Tipo",
+            "available": "Stock",
+            "price": "Prezzo",
+            "cancel": "Torna indietro",
+            "save": "Aggiungi hardware"
+        },
+        "detailsForm": {
+            "hardwareDetails": "Dettagli su",
+            "ratesMessage6": "Questa ferramenta può essere acquistata in 6 rate.",
+            "reviews": "Recensioni per questa ferramenta",
+            "zeroReviews": "Al momento non ci sono recensioni per questa ferramenta",
+            "back": "Torna indietro"
+        }
+    }
+}
