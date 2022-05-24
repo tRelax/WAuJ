@@ -1,0 +1,32 @@
+<div class="text-end mt-2">
+    <div class="btn-group">
+      <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+        {{'language.change' | translate}}
+      </button>
+      <ul class="dropdown-menu">
+        <li> <button type="button" (click)="languageChange('hr')" class="dropdown-item"><img width="30px" height="30px"
+              src="../../assets/4x3/hr.svg" class="me-2" style="display: inline-block;">{{'language.croatian' |
+            translate}}</button></li>
+        <li> <button type="button" (click)="languageChange('en')" class="dropdown-item"><img width="30px" height="30px"
+              src="../../assets/4x3/gb.svg" class="me-2" style="display: inline-block;">{{'language.english' |
+            translate}}</button>
+        </li>
+        <li> <button type="button" (click)="languageChange('cn')" class="dropdown-item"><img width="30px" height="30px"
+              src="../../assets/4x3/cn.svg" class="me-2" style="display: inline-block;">{{'language.chinese' |
+            translate}}</button>
+        </li>
+        <li> <button type="button" (click)="languageChange('it')" class="dropdown-item"><img width="30px" height="30px"
+              src="../../assets/4x3/it.svg" class="me-2" style="display: inline-block;">{{'language.italian' |
+            translate}}</button>
+        </li>
+        <li> <button type="button" (click)="languageChange('es')" class="dropdown-item"><img width="30px" height="30px"
+              src="../../assets/4x3/es.svg" class="me-2" style="display: inline-block;">{{'language.spanish' |
+            translate}}</button>
+        </li>
+        <li> <button type="button" (click)="languageChange('fr')" class="dropdown-item"><img width="30px" height="30px"
+              src="../../assets/4x3/fr.svg" class="me-2" style="display: inline-block;">{{'language.french' |
+            translate}}</button>
+        </li>
+      </ul>
+    </div>
+</div>

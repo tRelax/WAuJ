@@ -1,0 +1,67 @@
+{
+    "loginNavbar": {
+        "currentUsernameMessage": "登录为",
+        "logout": "签出"
+    },
+    "language": {
+        "change": "改变语言",
+        "croatian": "克罗地亚语",
+        "english": "英语",
+        "chinese": "中国",
+        "italian": "意大利语",
+        "spanish": "意大利语",
+        "french": "法国"
+    },
+    "navbar": {
+        "username": "帐号",
+        "role": "角色",
+        "login": "登录",
+        "logout": "注销"
+    },
+    "login": {
+        "title": "登录",
+        "username": "帐号",
+        "usernamePlaceholder": "输入用户名",
+        "password": "密码",
+        "passwordPlaceholder": "输入密码",
+        "loginButton": "登录",
+        "loginError": "登录失败! 请检查您的凭证并重试。"
+    },
+    "main": {
+        "hardwareLink": "艰苦跋涉"
+    },
+    "404": {
+        "pageNotFoundMessage": "没有找到所要求的页面",
+        "returnToHomepage": "返回首页"
+    },
+    "403": {
+        "pageForbiddenMessage": "没有足够的权限访问此页面!",
+        "returnToHomepage": "返回首页"
+    },
+    "hardwers": {
+        "title": "硬件列表",
+        "create": "添加新硬件",
+        "price": "价格",
+        "details": "详细内容",
+        "edit": "编辑",
+        "delete": "删除",
+        "createTitle": "添加新硬件",
+        "editTitle": "编辑硬件",
+        "form": {
+            "code": "代码",
+            "name": "名称",
+            "type": "类型",
+            "available": "库存",
+            "price": "价格",
+            "cancel": "返回首页",
+            "save": "添加硬件"
+        },
+        "detailsForm": {
+            "hardwareDetails": "详情如下",
+            "ratesMessage6": "此硬件可分6期购买.",
+            "reviews": "对该硬件的评论",
+            "zeroReviews": "目前还没有关于此硬件的评论",
+            "back": "返回首页"
+        }
+    }
+}
