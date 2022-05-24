@@ -4,8 +4,13 @@
         "logout": "Odjava"
     },
     "language": {
+        "change": "Promjeni jezik",
         "croatian": "Hrvatski",
-        "english": "Engleski"
+        "english": "Engleski",
+        "chinese": "Kineski",
+        "italian": "Talijanksi",
+        "spanish": "Španjolski",
+        "french": "Francuski"
     },
     "navbar": {
         "username": "Korisničko ime",

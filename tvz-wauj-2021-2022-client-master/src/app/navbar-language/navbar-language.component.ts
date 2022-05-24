@@ -11,26 +11,38 @@ export class NavbarLanguageComponent implements OnInit {
   currentLanguage: string;
 
   constructor(
-    private translateService: TranslateService
+    private translateService: TranslateService,
   ) { }
 
   ngOnInit(): void {
-    this.setCurrentLanguageDropdownValue();
   }
 
-  setCurrentLanguageDropdownValue() {
-    if (this.translateService.currentLang === 'hr') {
-      this.translateService.get('language.croatian').subscribe(language => this.currentLanguage = language);
-    } else if (this.translateService.currentLang === 'en') {
-      this.translateService.get('language.english').subscribe(language => this.currentLanguage = language);
-    } else {
-      throw Error('Unknown current language!');
+  languageChange(newLanguage: string) {
+    switch(newLanguage){
+      case 'hr':
+        this.translateService.use('hr');
+        this.currentLanguage = 'hr';
+        break;
+      case 'en':
+        this.translateService.use('en');
+        this.currentLanguage = 'en';
+        break;
+      case 'cn':
+        this.translateService.use('cn');
+        this.currentLanguage = 'cn';
+        break;
+      case 'it':
+        this.translateService.use('it');
+        this.currentLanguage = 'it';
+        break;
+      case 'es':
+        this.translateService.use('es');
+        this.currentLanguage = 'es';
+        break;
+      case 'fr':
+        this.translateService.use('fr');
+        this.currentLanguage = 'fr';
+        break;
     }
-  }
-
-  onLanguageChange(newLanguage: string) {
-    this.translateService.use(newLanguage).subscribe(
-      languageSwitched => this.setCurrentLanguageDropdownValue()
-    );
   }
 }

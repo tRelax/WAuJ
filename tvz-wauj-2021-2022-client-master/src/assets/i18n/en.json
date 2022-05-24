@@ -4,8 +4,13 @@
         "logout": "Sign out"
     },
     "language": {
+        "change": "Change language",
         "croatian": "Croatian",
-        "english": "English"
+        "english": "English",
+        "chinese": "Chinese",
+        "italian": "Italian",
+        "spanish": "Spanish",
+        "french": "French"
     },
     "navbar": {
         "username": "Username",
