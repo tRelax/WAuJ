@@ -1,11 +1,13 @@
 package hr.tvz.milakovic.hardwareapp.command;
 
 import hr.tvz.milakovic.hardwareapp.enums.HardwareType;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 import javax.validation.constraints.*;
 
 @Data
+@AllArgsConstructor
 public class HardwareCommand {
 
     private Long id;
