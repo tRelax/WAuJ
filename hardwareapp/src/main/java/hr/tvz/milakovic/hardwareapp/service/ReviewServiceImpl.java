@@ -34,6 +34,6 @@ public class ReviewServiceImpl implements ReviewService {
     }
 
     public ReviewDTO mapReviewToDTO(Review review) {
-        return new ReviewDTO(review.getId(), review.getTitle(), review.getContent(), review.getRating(), review.getHardware().getId());
+        return new ReviewDTO(review.getID(), review.getTitle(), review.getContent(), review.getRating(), review.getHardware().getId());
     }
 }
