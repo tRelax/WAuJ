@@ -1,5 +1,8 @@
 delete from review;
 delete from hardware;
+delete from user_authority;
+delete from authority;
+delete from user;
 
 insert into user(id, username, password)
     values
@@ -21,10 +24,10 @@ insert into hardware (code, name, price, type, available)
         ('003', 'Other Test Object', 1000.00, 'OTHER', 101);
 
 insert into review(title, content, rating, hardware_id)
-    values
-        ( 'amd1', 'dosta dobro', 3, 1 ),
-        ( 'amd2', 'bio sam vrlo pijan kad sam ovo kupio i sada trijezan shvacam kako je to lose', 1, 1 ),
-        ( 'palit1', 'samo meh', 2, 2 ),
-        ( 'palit2', 'ovo je najbolja stvar koju sam ikad imao preporucujem!!!!!', 5, 2 ),
-        ( 'other1', 'wauwweve, nez ovo je samo eh', 3, 3 ),
-        ( 'other2', 'najgora stvar koju imam', 1, 3 );
+values
+    ('amd1', 'dosta dobro', 3, 1),
+    ('amd2', 'bio sam vrlo pijan', 1, 1),
+    ('palit1', 'samo meh', 2, 2),
+    ('palit2', 'ovo je najbolja stvar koju', 5, 2),
+    ('other1', 'wauwweve, nez ovo je samo eh', 3, 3),
+    ('other2', 'najgora stvar koju imam', 1, 3);

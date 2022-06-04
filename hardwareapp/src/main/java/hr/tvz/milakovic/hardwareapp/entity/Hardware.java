@@ -29,7 +29,7 @@ public class Hardware {
 
     private Integer available;
 
-    @OneToMany(mappedBy = "hardware", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "hardware", fetch = FetchType.EAGER)
     private List<Review> reviewList;
 
     public Hardware(Long id, String code, String name, Double price, HardwareType type, Integer available) {
