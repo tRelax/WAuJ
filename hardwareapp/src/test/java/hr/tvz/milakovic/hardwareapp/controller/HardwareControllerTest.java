@@ -30,7 +30,7 @@ class HardwareControllerTest {
     @Autowired
     ObjectMapper objectMapper;
 
-    String adminToken = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY1NDYwMDI3NCwiaWF0IjoxNjUzOTk1NDc0LCJhdXRob3JpdGllcyI6IlJPTEVfQURNSU4ifQ.-o2xZ80fOHQrl8XQNH9plPVd8WMpWEGc5cbzsn2hif121wL2VV-gieK-X5-JILSQFQkLS9Azl99s58cELb53dA";
+    String adminToken = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY1NDk1MzUxMSwiaWF0IjoxNjU0MzQ4NzExLCJhdXRob3JpdGllcyI6IlJPTEVfQURNSU4ifQ.-Ci1RqQw8kH5M0MVLrOo79A32mCsUpmHYAdsaB_0MNEZ8S6B_Jk9NQ0nr8l1b9lKQ4LgT1AJ-wxjVLbFJdzhrw";
     String userToken = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNjU0NjAwNDY0LCJpYXQiOjE2NTM5OTU2NjQsImF1dGhvcml0aWVzIjoiUk9MRV9VU0VSIn0.yAIF2wVtdrspsCwf1d2CCponH6_t5T2nyXUAMvsYcRx6W_l3dPXcaJFK-F5MVKyRM3GaSjW5Z4AQLWONMRDTSQ";
     final Long TEST_ID = 1L;
     final String TEST_CODE = "000";
