@@ -17,11 +17,11 @@ insert into user_authority (user_id, authority_id)
         (1, 2),
         (2, 1);
 
-insert into hardware (code, name, price, type, available)
+insert into hardware (id, code, name, price, type, available)
     values
-        ('001', 'AMD Ryzen 7 5800X', 4220.00, 'CPU', 1),
-        ('002', 'Palit GeForce RTX 2060 Dual 12GB GDDR6', 5554.44, 'GPU', 8),
-        ('003', 'Other Test Object', 1000.00, 'OTHER', 101);
+        (1, '001', 'AMD Ryzen 7 5800X', 4220.00, 'CPU', 1),
+        (2, '002', 'Palit GeForce RTX 2060 Dual 12GB GDDR6', 5554.44, 'GPU', 8),
+        (3, '003', 'Other Test Object', 1000.00, 'OTHER', 101);
 
 insert into review(title, content, rating, hardware_id)
 values
